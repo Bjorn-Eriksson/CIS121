@@ -15,8 +15,11 @@ pyramid_volume(3, 4)
 #Question 1S (Strings)
 
 def is_fever(temp):
-    
-
+    numTemp = temp[:-1]
+    float(numTemp)
+    if temp[2] == 'F':
+        if numTemp >= 98.7:
+            
 
 #Example of how to remove the last character of a string
 '''
