@@ -36,7 +36,7 @@ def pool_hours(input_grade, input_time):
 
 
 #Question 11F (Functions)
-
+'''
 def convert_knuts(knuts):
     output = ''
     
@@ -59,6 +59,7 @@ def convert_knuts(knuts):
 
 input_knuts = int(input("Enter the amount of Knuts: "))
 print(f'{convert_knuts(input_knuts)}')
+'''
 #Logic behind question 11F;
 
 # 29 * 17 = 493
@@ -77,12 +78,85 @@ print(f'{convert_knuts(input_knuts)}')
 
 ########################################### STRINGS! ###########################################
 
-#Question 1S (Strings)
+#Question 1 S (Strings)
+
+
+#Question 2 S 
 '''
-def is_fever(temp):
-    numTemp = temp[:-1]
-    float(numTemp)
-    #if temp[2] == 'F':
-        #if numTemp >= 98.7:
+def is_fever(input_temp):
+    output = False
+
+    #Issue 1: how can we excract the temp to determine if F/C
+    unit = input_temp[-1]
+
+    #Issue 2: how can we extract the temperature?
+    temp = int(input_temp[:-1])
+
+    #Issue 3: If F, > 98.6 = Fever
+    if unit == 'F' and temp > 98.6:
+        output = True
+    #Issue 4: If C, > 37.0 = Fever
+    if unit == 'C' and temp > 37:
+        output = True
+
+    return output
+user_input = input("Enter a temp 00F, 00C: ")
+print(f'This temp {user_input} is fever? {is_fever(user_input)}')
 '''
+
+#Question 4 S
+'''
+def hamming_distance(str1, str2):
+    counter = 0
+    if len(str1) != len(str2):
+        return 0
+        #Make this first if statement more efficient, printing a diff outcome if the words
+        # aren't the same length.
+        
+    for i in range(0, len(str1)):
+        if str1[i] != str2[i]:
+            counter += 1
+
+    return counter
+word1 = input("Enter a word: ")
+word2 = input("Enter a word(Match character # from previous word): ")
+
+print(f'The hamming distance between {word1} and {word2} is {hamming_distance(word1, word2)}')
+'''
+
+
+
+
+
+#Question 8 S 
+
+def last_letters(sentence):
+    encode = ''
+    #1. How to iterate through the characters
+    for pos in range(0, len(sentence) -1):
+
+
+    #2. How can we know the last letter of each word?
+    # 'wingardium levios makes objects float '
+
+        if sentence[pos + 1] == ' ':
+            encode += sentence[pos]
+
+    #3. How do we store the last characters and output it?
+    return encode + sentence[-1]
+user_input = input("Enter a spell: ")
+print(f'Encoded Spell is {last_letters(user_input)}')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
