@@ -13,8 +13,31 @@ print(pyramid_volume(2, 2))
 print(pyramid_volume(3, 4))
 '''
 
-#Question 8F (Functions)
+#Question 2F
+'''
+def cone_volume(radius, height):
+    volume = (math.pi * ((radius ** 2) * height) / 3)
+    return volume
 
+print(cone_volume(1, 2))
+'''
+
+#Question 3F
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Question 8F (Functions)
+'''
 def pool_hours(input_grade, input_time):
     pool_hours = ''
     if input_grade == 'k':
@@ -32,7 +55,7 @@ def pool_hours(input_grade, input_time):
             pool_hours = '2 PM'
     #elif input_grade <= 9 and input_grade >= 12:
         #Finish the rest later
-
+'''
 
 
 #Question 11F (Functions)
@@ -40,21 +63,24 @@ def pool_hours(input_grade, input_time):
 def convert_knuts(knuts):
     output = ''
     
-    galleons = knuts // 493 # or (29 * 17)
-
+    galleons = knuts // 493 # or (29 * 17) 
+#First, we separate into the highest currency. // makes no remainder.
     remaining_knuts = knuts % 493
-
+#Then, we take the remaining knuts and ensure we can't make a new galleon.
     sickles = remaining_knuts // 29
-
+#Taking the now sorted Knuts, we see how many Sickles we can get from it.
     remaining_knuts = remaining_knuts % 29
-
+#Doing the // and %, we can separate the sickles into a sorted variable
+# then, by doing the modulous we get the remaining amount of knuts from
+# the sickle separation.
     if galleons > 0:
         output += (f'Galleons: {galleons} ')
     if sickles > 0:
         output += (f'Sickles: {sickles} ')
     if remaining_knuts > 0:
         output += (f'Knuts: {remaining_knuts} ')
-
+#These if statements are incase there's 0 knuts, it won't print a value of 0.
+#doing 'output += .....' allows us to pick and choose what we print.
     return output
 
 input_knuts = int(input("Enter the amount of Knuts: "))
@@ -74,6 +100,26 @@ print(f'{convert_knuts(input_knuts)}')
 # 51 // 29 = 1
 
 #Remaining knuts = 51 - (29 * 1) = 22
+
+
+#Question 14F, Odd or Even
+'''
+from random import randint
+value = randint(0,9) #picks a random integer between 0-9 inclusive.
+
+def guess_num(guess):
+    if value % 2 == 0:
+        if guess == 'even':
+            print("Correct!")
+        if guess == 'odd':
+            print("Incorrect.")
+    elif value % 2 == 1:
+        if guess == 'even':
+            print("Incorrect.")
+        if guess == 'odd':
+            print("Correct!")
+guess_num('odd')
+'''
 
 
 ########################################### STRINGS! ###########################################
@@ -103,6 +149,32 @@ def is_fever(input_temp):
 user_input = input("Enter a temp 00F, 00C: ")
 print(f'This temp {user_input} is fever? {is_fever(user_input)}')
 '''
+#Question 3 S
+
+def is_boiling(temp):
+    unit = temp[-1]
+    value = int(temp[:-1])
+
+    if unit == 'F' and value >= 212:
+        print("True")
+    elif unit == 'F' and value < 212:
+        print("False")
+    if unit == 'C' and value >= 100:
+        print("True")
+    elif unit == 'C' and value < 99:
+        print("False")
+is_boiling("212F")
+is_boiling("100C")
+is_boiling("0F")
+
+
+
+
+
+
+
+
+
 
 #Question 4 S
 '''
@@ -129,7 +201,7 @@ print(f'The hamming distance between {word1} and {word2} is {hamming_distance(wo
 
 
 #Question 8 S 
-
+'''
 def last_letters(sentence):
     encode = ''
     #1. How to iterate through the characters
@@ -146,6 +218,24 @@ def last_letters(sentence):
     return encode + sentence[-1]
 user_input = input("Enter a spell: ")
 print(f'Encoded Spell is {last_letters(user_input)}')
+'''
+
+#Question 9 S Unfinished
+'''
+def flip_flop(word):
+    length = len(word)
+    midpoint = length // 2
+    
+    first_half = word[:midpoint]
+    second_half = word[midpoint]
+    return second_half + first_half
+print(flip_flop('cranberries'))
+'''
+
+
+
+
+
 
 
 
