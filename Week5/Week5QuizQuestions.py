@@ -136,7 +136,7 @@ def is_fever(input_temp):
     unit = input_temp[-1]
 
     #Issue 2: how can we extract the temperature?
-    temp = int(input_temp[:-1])
+    temp = int(input_temp[:-1]) # [:num] is slicing
 
     #Issue 3: If F, > 98.6 = Fever
     if unit == 'F' and temp > 98.6:
@@ -150,7 +150,7 @@ user_input = input("Enter a temp 00F, 00C: ")
 print(f'This temp {user_input} is fever? {is_fever(user_input)}')
 '''
 #Question 3 S
-
+'''
 def is_boiling(temp):
     unit = temp[-1]
     value = int(temp[:-1])
@@ -163,10 +163,11 @@ def is_boiling(temp):
         print("True")
     elif unit == 'C' and value < 99:
         print("False")
+
 is_boiling("212F")
 is_boiling("100C")
 is_boiling("0F")
-
+'''
 
 
 
@@ -211,8 +212,8 @@ def last_letters(sentence):
     #2. How can we know the last letter of each word?
     # 'wingardium levios makes objects float '
 
-        if sentence[pos + 1] == ' ':
-            encode += sentence[pos]
+        if sentence[pos + 1] == ' ': #if the space after our letter is blank,
+            encode += sentence[pos] #add the letter to the encoded message.
 
     #3. How do we store the last characters and output it?
     return encode + sentence[-1]

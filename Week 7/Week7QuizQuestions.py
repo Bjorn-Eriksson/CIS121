@@ -17,6 +17,18 @@
 #4: how to search in dictionaries
 # if 'cow' in dict: / if 'cow' not in dict:
 
+#Question 1
+
+
+
+
+
+
+
+
+
+
+
 
 
 #Question 4
@@ -69,8 +81,7 @@ receipt = {'Side Salad' : 6, 'Chicken parm' : 12, 'Cookie' : 3}
 receipt_values = receipt.values()
 #Adds the values up with the sum built-in-method
 total_sum = sum(receipt_values)
-
-print(total_sum)
+#print(total_sum)
 
 
 

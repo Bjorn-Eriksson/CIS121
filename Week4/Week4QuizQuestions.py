@@ -134,7 +134,6 @@ print(sum)
 #New Questions professor forgot to include
 
 #Build a pyramid with a user-defined height out of asterisks '*'
-
 height = int(input("Enter a height: "))
 symbol = '*'
 
