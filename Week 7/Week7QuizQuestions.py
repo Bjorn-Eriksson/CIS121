@@ -17,12 +17,39 @@
 #4: how to search in dictionaries
 # if 'cow' in dict: / if 'cow' not in dict:
 
-#Question 1
+#Question 1 incomplete
 
+def is_isogram(word):
+    dict = {}
+    for letter in word:
+        if letter not in dict:
+            dict[letter] = 1 #Adds letter to dict
+        elif letter in dict:
+            dict[letter] += 1
 
+    if dict[letter] > 1:
+        print("False")
+    elif dict[letter] <= 1:
+        print("True")
+'''
+is_isogram("algorism")
+is_isogram("password")
+is_isogram("consecutive")
+'''
+#Question 2 incomplete
 
-
-
+def find_unique(numbers):
+    dict = {}
+    for number in numbers:
+        if number not in dict:
+            dict[number] = 1
+        else:
+            dict[number] += 1
+    if dict.values() <= 1:
+        return dict[number]
+    
+print(find_unique([1, 2, 2, 3, 3, 4, 4,]))
+print(find_unique([7, 8, 8, 9, 9, 10, 10]))
 
 
 

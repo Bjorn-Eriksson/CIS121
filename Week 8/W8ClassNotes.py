@@ -4,6 +4,7 @@
 #Learning about python debugger mode
 
 #Store a list of words consisting of all words with 2 or more vowels.
+#Click on left of the line counter to add a red dot, that's the stopping point for the debugger
 def string_to_list_with_vowels(word):
     words = []
     #Collect a word
@@ -19,6 +20,25 @@ def string_to_list_with_vowels(word):
     
 my_word = 'peter piper picked a peck of pickled peppers'
 print(string_to_list_with_vowels(my_word))
+
+################## Day 2:   ##########################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
