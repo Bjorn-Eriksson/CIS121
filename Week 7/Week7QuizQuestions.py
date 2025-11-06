@@ -48,8 +48,8 @@ def find_unique(numbers):
     if dict.values() <= 1:
         return dict[number]
     
-print(find_unique([1, 2, 2, 3, 3, 4, 4,]))
-print(find_unique([7, 8, 8, 9, 9, 10, 10]))
+#print(find_unique([1, 2, 2, 3, 3, 4, 4,]))
+#print(find_unique([7, 8, 8, 9, 9, 10, 10]))
 
 
 
@@ -66,7 +66,7 @@ def get_names(name_dict):
 #print(get_names({'01475' : 'Steve', '87469' : 'Alice', '654123' : 'Bob'}))
     
 
-#Question 5
+#Question 5 incomplete
 
 def find_oldest(age_dict):
     oldest_person = ''
@@ -109,6 +109,15 @@ receipt_values = receipt.values()
 #Adds the values up with the sum built-in-method
 total_sum = sum(receipt_values)
 #print(total_sum)
+
+
+#Question 10
+
+menu = {'burger':10,'fries':4,'soda':3}
+
+#for key, value in dict.items():        .items() will get both key and value pairs.
+for item, price in menu.items():
+    print(f'{item} cost {price}')
 
 
 
