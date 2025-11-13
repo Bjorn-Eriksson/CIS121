@@ -58,8 +58,7 @@ monster1.set_num_of_teeth(30)
 monster1.set_power(1)
 monster1.set_size(0.1)
 
-print(monster1)
-
+#print(monster1)
 
 
 
