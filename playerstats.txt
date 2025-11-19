@@ -1,0 +1,5 @@
+class,health,vigor,dexterity,mana
+Mage,10,3,5,10
+Archer,15,5,10,3
+Warrior,20,10,5,3
+Adventurer,15,7,7,7
